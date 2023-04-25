@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            SignalGeneratorView()
+            SignalGenerator()
                 .tabItem {
                     Label("Signal Generator", systemImage: "waveform.path.ecg")
                 }
@@ -25,13 +25,6 @@ struct ContentView: View {
                     Label("Network Analyzer", systemImage: "network")
                 }
         }
-    }
-}
-
-struct SignalGeneratorView: View {
-    var body: some View {
-        Text("Signal Generator")
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 

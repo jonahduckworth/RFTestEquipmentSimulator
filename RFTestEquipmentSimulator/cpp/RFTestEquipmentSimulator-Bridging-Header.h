@@ -1,4 +1,8 @@
-//
-//  Use this file to import your target's public headers that you would like to expose to Swift.
-//
+#ifndef RFTestEquipmentSimulator_Bridging_Header_h
+#define RFTestEquipmentSimulator_Bridging_Header_h
 
+#import "RFSignalGeneratorWrapper.h"
+#import "SpectrumAnalyzerWrapper.h"
+#import "NetworkAnalyzerWrapper.h"
+
+#endif /* RFTestEquipmentSimulator_Bridging_Header_h */

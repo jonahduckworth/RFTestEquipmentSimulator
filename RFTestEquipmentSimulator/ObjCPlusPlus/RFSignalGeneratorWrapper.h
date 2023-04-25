@@ -5,8 +5,21 @@
 //  Created by Jonah Duckworth on 2023-04-25.
 //
 
-#ifndef RFSignalGeneratorWrapper_h
-#define RFSignalGeneratorWrapper_h
+#import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
 
-#endif /* RFSignalGeneratorWrapper_h */
+@interface RFSignalGeneratorWrapper : NSObject
+
+- (instancetype)init;
+- (void)setFrequency:(double)frequency;
+- (double)getFrequency;
+- (void)setPowerLevel:(double)powerLevel;
+- (double)getPowerLevel;
+- (void)setOutputEnabled:(BOOL)outputEnabled;
+- (BOOL)getOutputEnabled;
+- (NSString *)getStatus;
+
+@end
+
+NS_ASSUME_NONNULL_END

@@ -8,6 +8,27 @@
 #ifndef rf_signal_generator_hpp
 #define rf_signal_generator_hpp
 
-#include <stdio.h>
+#include <string>
+
+class RFSignalGenerator {
+public:
+    RFSignalGenerator();
+
+    double getFrequency() const;
+    void setFrequency(double frequency);
+
+    double getPowerLevel() const;
+    void setPowerLevel(double powerLevel);
+
+    bool getOutputEnabled() const;
+    void setOutputEnabled(bool outputEnabled);
+
+    std::string getStatus() const;
+
+private:
+    double frequency;
+    double powerLevel;
+    bool outputEnabled;
+};
 
 #endif /* rf_signal_generator_hpp */
