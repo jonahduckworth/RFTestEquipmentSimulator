@@ -11,6 +11,15 @@
 		D8F2AA5F29F84EC0002B15E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F2AA5E29F84EC0002B15E2 /* ContentView.swift */; };
 		D8F2AA6129F84EC3002B15E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8F2AA6029F84EC3002B15E2 /* Assets.xcassets */; };
 		D8F2AA6429F84EC3002B15E2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8F2AA6329F84EC3002B15E2 /* Preview Assets.xcassets */; };
+		D8F2AA6F29F8544C002B15E2 /* rf_signal_generator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F2AA6D29F8544C002B15E2 /* rf_signal_generator.cpp */; };
+		D8F2AA7229F85475002B15E2 /* spectrum_analyzer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F2AA7029F85475002B15E2 /* spectrum_analyzer.cpp */; };
+		D8F2AA7529F85487002B15E2 /* network_analyzer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F2AA7329F85487002B15E2 /* network_analyzer.cpp */; };
+		D8F2AA7829F854AF002B15E2 /* SignalGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F2AA7729F854AF002B15E2 /* SignalGenerator.swift */; };
+		D8F2AA7A29F854BB002B15E2 /* SpectrumAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F2AA7929F854BB002B15E2 /* SpectrumAnalyzer.swift */; };
+		D8F2AA7C29F854C7002B15E2 /* NetworkAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F2AA7B29F854C7002B15E2 /* NetworkAnalyzer.swift */; };
+		D8F2AA7F29F854F2002B15E2 /* RFSignalGeneratorWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = D8F2AA7E29F854F2002B15E2 /* RFSignalGeneratorWrapper.mm */; };
+		D8F2AA8229F8551D002B15E2 /* SpectrumAnalyzerWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = D8F2AA8129F8551D002B15E2 /* SpectrumAnalyzerWrapper.mm */; };
+		D8F2AA8529F8553D002B15E2 /* NetworkAnalyzerWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = D8F2AA8429F8553D002B15E2 /* NetworkAnalyzerWrapper.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +29,22 @@
 		D8F2AA6029F84EC3002B15E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8F2AA6329F84EC3002B15E2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D8F2AA6529F84EC3002B15E2 /* RFTestEquipmentSimulator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RFTestEquipmentSimulator.entitlements; sourceTree = "<group>"; };
+		D8F2AA6C29F8544B002B15E2 /* RFTestEquipmentSimulator-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RFTestEquipmentSimulator-Bridging-Header.h"; sourceTree = "<group>"; };
+		D8F2AA6D29F8544C002B15E2 /* rf_signal_generator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = rf_signal_generator.cpp; sourceTree = "<group>"; };
+		D8F2AA6E29F8544C002B15E2 /* rf_signal_generator.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = rf_signal_generator.hpp; sourceTree = "<group>"; };
+		D8F2AA7029F85475002B15E2 /* spectrum_analyzer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = spectrum_analyzer.cpp; sourceTree = "<group>"; };
+		D8F2AA7129F85475002B15E2 /* spectrum_analyzer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = spectrum_analyzer.hpp; sourceTree = "<group>"; };
+		D8F2AA7329F85487002B15E2 /* network_analyzer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = network_analyzer.cpp; sourceTree = "<group>"; };
+		D8F2AA7429F85487002B15E2 /* network_analyzer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = network_analyzer.hpp; sourceTree = "<group>"; };
+		D8F2AA7729F854AF002B15E2 /* SignalGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalGenerator.swift; sourceTree = "<group>"; };
+		D8F2AA7929F854BB002B15E2 /* SpectrumAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectrumAnalyzer.swift; sourceTree = "<group>"; };
+		D8F2AA7B29F854C7002B15E2 /* NetworkAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAnalyzer.swift; sourceTree = "<group>"; };
+		D8F2AA7E29F854F2002B15E2 /* RFSignalGeneratorWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RFSignalGeneratorWrapper.mm; sourceTree = "<group>"; };
+		D8F2AA8029F8550C002B15E2 /* RFSignalGeneratorWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RFSignalGeneratorWrapper.h; sourceTree = "<group>"; };
+		D8F2AA8129F8551D002B15E2 /* SpectrumAnalyzerWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SpectrumAnalyzerWrapper.mm; sourceTree = "<group>"; };
+		D8F2AA8329F8552B002B15E2 /* SpectrumAnalyzerWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpectrumAnalyzerWrapper.h; sourceTree = "<group>"; };
+		D8F2AA8429F8553D002B15E2 /* NetworkAnalyzerWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NetworkAnalyzerWrapper.mm; sourceTree = "<group>"; };
+		D8F2AA8629F8557F002B15E2 /* NetworkAnalyzerWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkAnalyzerWrapper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +77,9 @@
 		D8F2AA5B29F84EC0002B15E2 /* RFTestEquipmentSimulator */ = {
 			isa = PBXGroup;
 			children = (
+				D8F2AA7D29F854D2002B15E2 /* ObjCPlusPlus */,
+				D8F2AA7629F85494002B15E2 /* Swift */,
+				D8F2AA6B29F8541F002B15E2 /* cpp */,
 				D8F2AA5C29F84EC0002B15E2 /* RFTestEquipmentSimulatorApp.swift */,
 				D8F2AA5E29F84EC0002B15E2 /* ContentView.swift */,
 				D8F2AA6029F84EC3002B15E2 /* Assets.xcassets */,
@@ -67,6 +95,43 @@
 				D8F2AA6329F84EC3002B15E2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D8F2AA6B29F8541F002B15E2 /* cpp */ = {
+			isa = PBXGroup;
+			children = (
+				D8F2AA6C29F8544B002B15E2 /* RFTestEquipmentSimulator-Bridging-Header.h */,
+				D8F2AA6D29F8544C002B15E2 /* rf_signal_generator.cpp */,
+				D8F2AA6E29F8544C002B15E2 /* rf_signal_generator.hpp */,
+				D8F2AA7029F85475002B15E2 /* spectrum_analyzer.cpp */,
+				D8F2AA7129F85475002B15E2 /* spectrum_analyzer.hpp */,
+				D8F2AA7329F85487002B15E2 /* network_analyzer.cpp */,
+				D8F2AA7429F85487002B15E2 /* network_analyzer.hpp */,
+			);
+			path = cpp;
+			sourceTree = "<group>";
+		};
+		D8F2AA7629F85494002B15E2 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				D8F2AA7729F854AF002B15E2 /* SignalGenerator.swift */,
+				D8F2AA7929F854BB002B15E2 /* SpectrumAnalyzer.swift */,
+				D8F2AA7B29F854C7002B15E2 /* NetworkAnalyzer.swift */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
+		D8F2AA7D29F854D2002B15E2 /* ObjCPlusPlus */ = {
+			isa = PBXGroup;
+			children = (
+				D8F2AA7E29F854F2002B15E2 /* RFSignalGeneratorWrapper.mm */,
+				D8F2AA8029F8550C002B15E2 /* RFSignalGeneratorWrapper.h */,
+				D8F2AA8129F8551D002B15E2 /* SpectrumAnalyzerWrapper.mm */,
+				D8F2AA8329F8552B002B15E2 /* SpectrumAnalyzerWrapper.h */,
+				D8F2AA8429F8553D002B15E2 /* NetworkAnalyzerWrapper.mm */,
+				D8F2AA8629F8557F002B15E2 /* NetworkAnalyzerWrapper.h */,
+			);
+			path = ObjCPlusPlus;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -101,6 +166,7 @@
 				TargetAttributes = {
 					D8F2AA5829F84EC0002B15E2 = {
 						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1410;
 					};
 				};
 			};
@@ -139,8 +205,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8F2AA7C29F854C7002B15E2 /* NetworkAnalyzer.swift in Sources */,
+				D8F2AA6F29F8544C002B15E2 /* rf_signal_generator.cpp in Sources */,
 				D8F2AA5F29F84EC0002B15E2 /* ContentView.swift in Sources */,
+				D8F2AA7A29F854BB002B15E2 /* SpectrumAnalyzer.swift in Sources */,
+				D8F2AA7229F85475002B15E2 /* spectrum_analyzer.cpp in Sources */,
+				D8F2AA7829F854AF002B15E2 /* SignalGenerator.swift in Sources */,
+				D8F2AA8229F8551D002B15E2 /* SpectrumAnalyzerWrapper.mm in Sources */,
 				D8F2AA5D29F84EC0002B15E2 /* RFTestEquipmentSimulatorApp.swift in Sources */,
+				D8F2AA8529F8553D002B15E2 /* NetworkAnalyzerWrapper.mm in Sources */,
+				D8F2AA7529F85487002B15E2 /* network_analyzer.cpp in Sources */,
+				D8F2AA7F29F854F2002B15E2 /* RFSignalGeneratorWrapper.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +340,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = RFTestEquipmentSimulator/RFTestEquipmentSimulator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -283,6 +359,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.duckwxrth.RFTestEquipmentSimulator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RFTestEquipmentSimulator/cpp/RFTestEquipmentSimulator-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -292,6 +370,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = RFTestEquipmentSimulator/RFTestEquipmentSimulator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -310,6 +389,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.duckwxrth.RFTestEquipmentSimulator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RFTestEquipmentSimulator/cpp/RFTestEquipmentSimulator-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
