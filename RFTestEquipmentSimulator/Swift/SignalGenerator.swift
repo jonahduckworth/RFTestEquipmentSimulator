@@ -6,55 +6,71 @@
 //
 
 import SwiftUI
+import Combine
 
 struct SignalGenerator: View {
-    @State private var frequency: String = "1000"
-    @State private var powerLevel: String = "0"
-    @State private var outputEnabled: Bool = false
+    @StateObject private var rfSignalGeneratorWrapper = RFSignalGeneratorWrapperSwift()
 
-    private var rfSignalGeneratorWrapper = RFSignalGeneratorWrapper()
+    @State private var showAlert = false
+    @State private var chartData: [Double] = []
+    @State private var chartUpdateCancellable: AnyCancellable?
 
     var body: some View {
         VStack {
-            VStack(alignment: .leading) {
-                Text("Frequency (Hz)")
-                    .font(.headline)
+            HStack {
+                Text("Frequency (MHz):")
+                TextField("Frequency", value: $rfSignalGeneratorWrapper.frequency, format: .number)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .frame(width: 150)
+                    .padding(.leading, 4)
+                    .onChange(of: rfSignalGeneratorWrapper.frequency) { _ in
+                        chartUpdateCancellable?.cancel()
 
-                TextField("Enter frequency", text: $frequency, onCommit: {
-                    if let frequencyValue = Double(frequency) {
-                        rfSignalGeneratorWrapper.setFrequency(frequencyValue)
+                        let frequency = rfSignalGeneratorWrapper.frequency
+                        let updateInterval = 1.0 / (frequency * 0.01) // 1% of the frequency period
+
+                        chartUpdateCancellable = Timer.publish(every: updateInterval, on: .main, in: .common)
+                            .autoconnect()
+                            .sink { _ in
+                                let randomValue = Double.random(in: -1.0...1.0)
+                                chartData.append(randomValue)
+                                if chartData.count > 100 {
+                                    chartData.removeFirst()
+                                }
+                            }
                     }
-                })
-                .padding()
-                .cornerRadius(8)
-
-                Text("Power Level (dBm)")
-                    .font(.headline)
-
-                TextField("Enter power level", text: $powerLevel, onCommit: {
-                    if let powerLevelValue = Double(powerLevel) {
-                        rfSignalGeneratorWrapper.setPowerLevel(powerLevelValue)
-                    }
-                })
-                .padding()
-                .cornerRadius(8)
-
-                Toggle("Output Enabled", isOn: $outputEnabled)
-                    .onChange(of: outputEnabled, perform: { value in
-                        rfSignalGeneratorWrapper.setOutputEnabled(value)
-                    })
-                    .padding(.vertical)
             }
-            .padding()
-
-            Divider()
-
-            VStack {
-                Text("RF Signal Generator Status")
-                    .font(.headline)
-                Text(rfSignalGeneratorWrapper.getStatus())
-                    .padding()
+                
+            HStack {
+                Text("Power Level (dBm):")
+                TextField("Power Level", value: $rfSignalGeneratorWrapper.powerLevel, format: .number)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .frame(width: 150)
+                    .padding(.leading, 4)
             }
+
+            Toggle(isOn: $rfSignalGeneratorWrapper.outputEnabled) {
+                Text("Output Enabled")
+            }
+
+            Button(action: {
+                showAlert = true
+            }) {
+                Text("Show RF Signal Generator Status")
+            }
+            .alert(isPresented: $showAlert) {
+                Alert(
+                    title: Text("RF Signal Generator Status"),
+                    message: Text(rfSignalGeneratorWrapper.getStatus()),
+                    dismissButton: .default(Text("OK"))
+                )
+            }
+            
+            LineChartView(data: $chartData)
+                            .frame(height: 300)
+                            .padding(.top)
+
+                        Spacer()
         }
     }
 }

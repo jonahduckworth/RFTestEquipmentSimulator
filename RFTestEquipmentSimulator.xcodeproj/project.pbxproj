@@ -20,6 +20,9 @@
 		D8F2AA7F29F854F2002B15E2 /* RFSignalGeneratorWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = D8F2AA7E29F854F2002B15E2 /* RFSignalGeneratorWrapper.mm */; };
 		D8F2AA8229F8551D002B15E2 /* SpectrumAnalyzerWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = D8F2AA8129F8551D002B15E2 /* SpectrumAnalyzerWrapper.mm */; };
 		D8F2AA8529F8553D002B15E2 /* NetworkAnalyzerWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = D8F2AA8429F8553D002B15E2 /* NetworkAnalyzerWrapper.mm */; };
+		D8F2AA8A29F875F0002B15E2 /* SineWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F2AA8929F875F0002B15E2 /* SineWave.swift */; };
+		D8F2AA8C29F879D8002B15E2 /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F2AA8B29F879D8002B15E2 /* LineChartView.swift */; };
+		D8F2AA8E29F87AE0002B15E2 /* RFSignalGeneratorWrapperSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F2AA8D29F87AE0002B15E2 /* RFSignalGeneratorWrapperSwift.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +48,9 @@
 		D8F2AA8329F8552B002B15E2 /* SpectrumAnalyzerWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpectrumAnalyzerWrapper.h; sourceTree = "<group>"; };
 		D8F2AA8429F8553D002B15E2 /* NetworkAnalyzerWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NetworkAnalyzerWrapper.mm; sourceTree = "<group>"; };
 		D8F2AA8629F8557F002B15E2 /* NetworkAnalyzerWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkAnalyzerWrapper.h; sourceTree = "<group>"; };
+		D8F2AA8929F875F0002B15E2 /* SineWave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SineWave.swift; sourceTree = "<group>"; };
+		D8F2AA8B29F879D8002B15E2 /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
+		D8F2AA8D29F87AE0002B15E2 /* RFSignalGeneratorWrapperSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RFSignalGeneratorWrapperSwift.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,9 @@
 				D8F2AA7729F854AF002B15E2 /* SignalGenerator.swift */,
 				D8F2AA7929F854BB002B15E2 /* SpectrumAnalyzer.swift */,
 				D8F2AA7B29F854C7002B15E2 /* NetworkAnalyzer.swift */,
+				D8F2AA8929F875F0002B15E2 /* SineWave.swift */,
+				D8F2AA8B29F879D8002B15E2 /* LineChartView.swift */,
+				D8F2AA8D29F87AE0002B15E2 /* RFSignalGeneratorWrapperSwift.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -208,6 +217,9 @@
 				D8F2AA7C29F854C7002B15E2 /* NetworkAnalyzer.swift in Sources */,
 				D8F2AA6F29F8544C002B15E2 /* rf_signal_generator.cpp in Sources */,
 				D8F2AA5F29F84EC0002B15E2 /* ContentView.swift in Sources */,
+				D8F2AA8C29F879D8002B15E2 /* LineChartView.swift in Sources */,
+				D8F2AA8A29F875F0002B15E2 /* SineWave.swift in Sources */,
+				D8F2AA8E29F87AE0002B15E2 /* RFSignalGeneratorWrapperSwift.swift in Sources */,
 				D8F2AA7A29F854BB002B15E2 /* SpectrumAnalyzer.swift in Sources */,
 				D8F2AA7229F85475002B15E2 /* spectrum_analyzer.cpp in Sources */,
 				D8F2AA7829F854AF002B15E2 /* SignalGenerator.swift in Sources */,
